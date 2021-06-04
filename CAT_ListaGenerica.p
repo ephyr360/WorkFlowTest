@@ -25,8 +25,8 @@ DEFINE VARIABLE hO AS HANDLE NO-UNDO.
     
 CREATE QUERY qh.
 CREATE BUFFER hB FOR TABLE "prueba".
-ASSIGN hF = hB:BUFFER-FIELD("id")       
-       hO = hB:BUFFER-FIELD("Campo1").
+ASSIGN hF = hB:BUFFER-FIELD("ID")       
+       hO = hB:BUFFER-FIELD("campo1").
 qh:SET-BUFFERS(hb).
 qh:QUERY-PREPARE("FOR EACH " + tabla + " WHERE " + condicion + " BY " + orden).
 qh:QUERY-OPEN.
@@ -34,8 +34,8 @@ qh:QUERY-OPEN.
 REPEAT:
     qh:GET-NEXT().
     IF qh:QUERY-OFF-END THEN LEAVE.
-        respuesta = respuesta + '"ID"' + ':"' + hF:BUFFER-VALUE + '",'.
-        respuesta = respuesta + '"Campo1"' + ':"' + hO:BUFFER-VALUE + '",'.
+        respuesta = respuesta + '"id"' + ':"' + hF:BUFFER-VALUE + '",'.
+        respuesta = respuesta + '"campo1"' + ':"' + hO:BUFFER-VALUE + '",'.
 END.
 respuesta = respuesta + '}'.
 qh:QUERY-CLOSE().
