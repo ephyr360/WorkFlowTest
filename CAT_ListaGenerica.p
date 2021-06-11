@@ -41,4 +41,5 @@ respuesta = respuesta + '}'.
 qh:QUERY-CLOSE().
 DELETE OBJECT qh.
 
-/* Solo para verificar el github y jenkins */
+/* Solo para verificar el github y jenkins,
+otra prueba*/
