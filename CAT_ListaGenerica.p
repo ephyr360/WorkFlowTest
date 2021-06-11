@@ -40,3 +40,5 @@ END.
 respuesta = respuesta + '}'.
 qh:QUERY-CLOSE().
 DELETE OBJECT qh.
+
+/* Solo para verificar el github y jenkins */
